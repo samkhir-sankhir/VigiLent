@@ -24,4 +24,30 @@
 <section class="contact" id="contact" aria-labelledby="contact-title"><div class="contactIn"><div class="contactCopy"><div class="ey">CONTACT</div><h2 id="contact-title">Connect with VigiLent.</h2><p class="sub">Get in touch with the team or follow our updates on LinkedIn.</p><a class="contactEmail" href="mailto:vigilent.technology@gmail.com">vigilent.technology@gmail.com</a></div><a class="contactQR" href="https://www.linkedin.com/company/146948943/" target="_blank" rel="noopener noreferrer"><img src="assets/linkedin-qr.svg" width="180" height="180" alt="QR code for the LinkedIn company page linked from the VigiLent poster"><span>Follow us on LinkedIn</span></a></div></section>
 <footer><div><strong style="color:white;font-size:20px">VigiLent</strong><br><small>COSIMA 2026 competition prototype</small></div><div>Sensor-based retrofit door-safety concept · Research demonstrator</div><a href="how-to-use.html" style="color:white">How to use →</a></footer><script>const f=document.getElementById('commentForm'),c=document.getElementById('comments');// Remove the requested sample comment once, preserving other saved feedback.
 (()=>{const key='vigilent-remove-sampada-sample-v1';if(localStorage.getItem(key))return;const saved=JSON.parse(localStorage.getItem('vigilent-comments')||'[]');const norm=v=>String(v||'').trim().toLowerCase();const kept=saved.filter(x=>!(norm(x.name)==='sampada'&&norm(x.role)==='cosima participant'&&norm(x.org)==='tuhh'&&norm(x.text)==='it is good'));if(kept.length!==saved.length)localStorage.setItem('vigilent-comments',JSON.stringify(kept));localStorage.setItem(key,'done')})();
+  <section id="live-monitoring" style="padding:60px 5%;">
+  <h2>VigiLent — Live Monitoring</h2>
+  <p>
+    Real-time camera, YOLO detections, ultrasonic,
+    LD2450 radar and model-door actuation status.
+  </p>
+
+  <iframe
+    src="https://rp5vigilent.tailc029f6.ts.net/"
+    title="VigiLent Live Dashboard"
+    style="width:100%;height:850px;border:0;
+           border-radius:16px;"
+    loading="lazy">
+  </iframe>
+
+  <p>
+    <a href="https://rp5vigilent.tailc029f6.ts.net/"
+       target="_blank" rel="noopener noreferrer">
+      Open Private Live Dashboard
+    </a>
+  </p>
+
+  <small>
+    Live monitoring is available to authorized devices only.
+  </small>
+</section>
 function draw(){if(!c)return;let a=JSON.parse(localStorage.getItem('vigilent-comments')||'[]');c.innerHTML=a.map(x=>`<div class="comment"><b>${x.name}</b> · <small>${x.role}${x.org?' · '+x.org:''}</small><p>${x.text}</p></div>`).join('')}if(f)f.addEventListener('submit',e=>{e.preventDefault();let a=JSON.parse(localStorage.getItem('vigilent-comments')||'[]');a.unshift({name:f.name.value,org:f.org.value,role:f.role.value,text:f.comment.value});localStorage.setItem('vigilent-comments',JSON.stringify(a));f.reset();draw()});draw();</script></body></html>
