@@ -26,35 +26,43 @@
 <section class="section" id="feedback"><div class="feedback"><div><div class="ey" style="color:var(--o)">FEEDBACK</div><h2 class="title">Challenge the concept.</h2><p class="sub">We welcome technical questions and constructive feedback from COSIMA participants, jury members, researchers and industry visitors.</p></div><div><form class="form" id="commentForm"><div class="row"><label>Name<input name="name" required placeholder="Your name"></label><label>Organisation<input name="org" placeholder="Company / university"></label></div><label>Role<select name="role"><option>COSIMA participant</option><option>Jury / Panelist</option><option>Industry professional</option><option>Researcher / Engineer</option><option>Visitor</option></select></label><label>Feedback<textarea name="comment" rows="5" required placeholder="What would you test, question or improve?"></textarea></label><button class="btn">Submit feedback</button><p class="note">Prototype website: feedback is currently stored only in this browser. A hosted database should be connected before public launch.</p></form><div id="comments" class="comments"></div></div></div></section>
 <section class="contact" id="contact" aria-labelledby="contact-title"><div class="contactIn"><div class="contactCopy"><div class="ey">CONTACT</div><h2 id="contact-title">Connect with VigiLent.</h2><p class="sub">Get in touch with the team or follow our updates on LinkedIn.</p><a class="contactEmail" href="mailto:vigilent.technology@gmail.com">vigilent.technology@gmail.com</a></div><a class="contactQR" href="https://www.linkedin.com/company/146948943/" target="_blank" rel="noopener noreferrer"><img src="assets/linkedin-qr.svg" width="180" height="180" alt="QR code for the LinkedIn company page linked from the VigiLent poster"><span>Follow us on LinkedIn</span></a></div></section>
 
-<!-- Live monitoring: displayed on this existing website; private dashboard hosted on Pi -->
-<div style="text-align:center;padding:28px;
-            background:#09223e;color:white;
-            border-radius:16px;margin:20px 0;">
+<section id="live-monitoring" class="section">
+  <div class="sectionHead">
+    <div class="ey">LIVE SYSTEM</div>
+    <h2 class="title">VigiLent Live Monitoring</h2>
+    <p class="sub">
+      Real-time YOLO camera, ultrasonic and radar
+      measurements, sensor fusion, servo and buzzer status.
+    </p>
+  </div>
 
-  <h2 style="color:white;">VigiLent Live Monitoring</h2>
+  <div style="background:#09223e; padding:20px;
+              border-radius:16px;">
 
-  <p>
-    Real-time YOLO camera, LD2450 radar,
-    ultrasonic distance, sensor fusion,
-    servo and buzzer status.
-  </p>
+    <iframe
+      src="https://rp5vigilent.tailc029f6.ts.net/"
+      title="VigiLent Live Dashboard"
+      style="width:100%;height:850px;border:0;
+             border-radius:12px;"
+      loading="eager">
+    </iframe>
 
-  <a href="https://rp5vigilent.tailc029f6.ts.net/"
-     target="_blank"
-     rel="noopener noreferrer"
-     style="display:inline-block;background:#f56632;
-            color:white;padding:16px 26px;
-            text-decoration:none;border-radius:8px;
-            font-weight:bold;">
-    View Live Camera &amp; Sensor Data
-  </a>
+    <p style="text-align:center;color:white;">
+      If live monitoring doesn't load here,
+      open the dashboard directly.
+    </p>
 
-  <p style="font-size:13px;color:#bdc9d5;">
-    Private monitoring: Tailscale access required.
-  </p>
-</div>
+    <p style="text-align:center;">
+      <a
+        class="btn"
+        href="https://rp5vigilent.tailc029f6.ts.net/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Open Live Dashboard
+      </a>
+    </p>
+  </div>
 </section>
-
 <footer><div><strong style="color:white;font-size:20px">VigiLent</strong><br><small>COSIMA 2026 competition prototype</small></div><div>Sensor-based retrofit door-safety concept · Research demonstrator</div><a href="how-to-use.html" style="color:white">How to use →</a></footer><script>const f=document.getElementById('commentForm'),c=document.getElementById('comments');// Remove the requested sample comment once, preserving other saved feedback.
 (()=>{const key='vigilent-remove-sampada-sample-v1';if(localStorage.getItem(key))return;const saved=JSON.parse(localStorage.getItem('vigilent-comments')||'[]');const norm=v=>String(v||'').trim().toLowerCase();const kept=saved.filter(x=>!(norm(x.name)==='sampada'&&norm(x.role)==='cosima participant'&&norm(x.org)==='tuhh'&&norm(x.text)==='it is good'));if(kept.length!==saved.length)localStorage.setItem('vigilent-comments',JSON.stringify(kept));localStorage.setItem(key,'done')})();
   
