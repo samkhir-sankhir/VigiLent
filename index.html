@@ -27,24 +27,32 @@
 <section class="contact" id="contact" aria-labelledby="contact-title"><div class="contactIn"><div class="contactCopy"><div class="ey">CONTACT</div><h2 id="contact-title">Connect with VigiLent.</h2><p class="sub">Get in touch with the team or follow our updates on LinkedIn.</p><a class="contactEmail" href="mailto:vigilent.technology@gmail.com">vigilent.technology@gmail.com</a></div><a class="contactQR" href="https://www.linkedin.com/company/146948943/" target="_blank" rel="noopener noreferrer"><img src="assets/linkedin-qr.svg" width="180" height="180" alt="QR code for the LinkedIn company page linked from the VigiLent poster"><span>Follow us on LinkedIn</span></a></div></section>
 
 <!-- Live monitoring: displayed on this existing website; private dashboard hosted on Pi -->
-<section class="section" id="live-monitoring" aria-labelledby="live-monitoring-title">
-  <div class="sectionHead">
-    <div class="ey">LIVE PROTOTYPE</div>
-    <h2 class="title" id="live-monitoring-title">VigiLent Live Monitoring</h2>
-    <p class="sub">Live YOLO camera, radar target tracking, ultrasonic readings, IR sensor and prototype servo/buzzer status.</p>
-  </div>
-  <div class="livePanel">
-    <div class="livePanelTop">
-      <strong>Private live dashboard</strong>
-      <a class="btn" href="https://rp5vigilent.tailc029f6.ts.net/" target="_blank" rel="noopener noreferrer">Open full dashboard ↗</a>
-    </div>
-    <iframe src="https://rp5vigilent.tailc029f6.ts.net/"
-            title="VigiLent live camera and sensors"
-            loading="lazy"
-            referrerpolicy="no-referrer"
-            allow="fullscreen"></iframe>
-    <p class="liveNote">Only devices authorized on the VigiLent Tailscale network can view live data. If the embedded dashboard is unavailable, use <a href="https://rp5vigilent.tailc029f6.ts.net/" target="_blank" rel="noopener noreferrer">Open full dashboard</a>. No public actuator controls are provided.</p>
-  </div>
+<div style="text-align:center;padding:28px;
+            background:#09223e;color:white;
+            border-radius:16px;margin:20px 0;">
+
+  <h2 style="color:white;">VigiLent Live Monitoring</h2>
+
+  <p>
+    Real-time YOLO camera, LD2450 radar,
+    ultrasonic distance, sensor fusion,
+    servo and buzzer status.
+  </p>
+
+  <a href="https://rp5vigilent.tailc029f6.ts.net/"
+     target="_blank"
+     rel="noopener noreferrer"
+     style="display:inline-block;background:#f56632;
+            color:white;padding:16px 26px;
+            text-decoration:none;border-radius:8px;
+            font-weight:bold;">
+    View Live Camera &amp; Sensor Data
+  </a>
+
+  <p style="font-size:13px;color:#bdc9d5;">
+    Private monitoring: Tailscale access required.
+  </p>
+</div>
 </section>
 
 <footer><div><strong style="color:white;font-size:20px">VigiLent</strong><br><small>COSIMA 2026 competition prototype</small></div><div>Sensor-based retrofit door-safety concept · Research demonstrator</div><a href="how-to-use.html" style="color:white">How to use →</a></footer><script>const f=document.getElementById('commentForm'),c=document.getElementById('comments');// Remove the requested sample comment once, preserving other saved feedback.
